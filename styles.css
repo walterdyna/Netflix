@@ -69,3 +69,7 @@ video {
     border-radius: 4px;
     cursor: pointer;
 }
+
+.imagen-carosel {
+    height: 150px;
+}
