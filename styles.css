@@ -9,17 +9,15 @@
 body {
     background-color: #000;
     margin: 0;
-    padding: 0;
+    padding: 20px;
     font-family: "Montserrat", sans-serif;
     position: relative;
     padding-bottom: 100px;
-    padding: 20px;
 }
 
 ul {
     height: 25px;
     width: 95%;
-    /* Largura */
     display: flex;
     justify-content: space-between;
     list-style-type: none;
@@ -28,20 +26,16 @@ ul {
 
 .img-topo {
     height: 25px;
-    /* Altura */
 }
 
 video {
-    width: 97vw;
-    /* Largura */
+    width: 100%;
     min-height: 30vh;
-    /* Altura */
 }
 
 .capa {
     position: absolute;
     bottom: 30%;
-    /* TOP - CIMA, BOTTOM - BAIXO, LEFT - ESQUERDA, RIGHT- DIREITA */
     left: 5%;
     width: 45%;
     z-index: 3;
@@ -50,10 +44,8 @@ video {
 .capa-titulo {
     color: white;
     font-size: 80px;
-    /* Tamanho da fonte */
     margin-bottom: 5px;
     font-weight: bold;
-    /* Grossura da fonte */
 }
 
 .capa-descricao {
@@ -62,21 +54,17 @@ video {
     margin-bottom: 20px;
 }
 
-.link-assistir {
+.link-assistir,
+.link-info {
     background-color: white;
     color: black;
     padding: 10px 20px;
     border-radius: 4px;
     cursor: pointer;
-    /* Mãosinha */
 }
 
 .link-info {
-    color: black;
     background-color: rgba(255, 255, 255, 0.35);
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
 }
 
 .imagem-carrossel {
@@ -121,6 +109,65 @@ video {
     background-color: #181818;
     margin: 10% auto;
     padding: 20px;
-    width: 60%;
+    width: 90%;
+    max-width: 600px;
     color: white;
+}
+
+/* Media queries para telas menores */
+@media (max-width: 1200px) {
+    .capa {
+        width: 55%;
+    }
+    .capa-titulo {
+        font-size: 60px;
+    }
+    .titulo-carrossel {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    ul {
+        flex-direction: column;
+        height: auto;
+    }
+    .capa {
+        width: 70%;
+        left: 5%;
+        bottom: 25%;
+    }
+    .capa-titulo {
+        font-size: 40px;
+    }
+    .capa-descricao {
+        font-size: 16px;
+    }
+    .titulo-carrossel {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .capa {
+        width: 90%;
+        left: 5%;
+        bottom: 20%;
+    }
+    .capa-titulo {
+        font-size: 30px;
+    }
+    .capa-descricao {
+        font-size: 14px;
+    }
+    .titulo-carrossel {
+        font-size: 18px;
+    }
+    .link-assistir, .link-info {
+        padding: 8px 16px;
+    }
+    .botao-som {
+        top: 70px;
+        right: 10px;
+    }
 }
